@@ -1,0 +1,21 @@
+<h1>Welcome</h1>
+
+<div class="container">
+    Welcom Mr. {{welcomeText}}
+    You can manage your todos <a [routerLink]="['/todos']" >here</a>
+  </div>
+
+  <div class="container">
+    Click for message from Spring
+    <button class="btn btn-info" (click)="onGetWelcome()">Get Welcome </button>
+  </div>
+
+  <div class="container">
+    Click for message from Spring with Path variable
+    <button class="btn btn-info" (click)="onGetWelcomeWithParameter()">Get Welcome </button>
+  </div>
+
+  <div class="container" *ngIf="springMessage">
+    <h2>My message from Spring</h2>
+    {{springMessage}}
+  </div>
